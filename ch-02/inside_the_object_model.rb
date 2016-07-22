@@ -43,3 +43,15 @@ p Class.instance_methods(false)
 
 # An object’s instance variables live in the object itself, and an object’s methods live in the object’s class. That’s why objects
 # of the same class share methods but don’t share instance variables.
+
+# A Ruby class inherits from its superclass.
+
+p Array.superclass
+p Object.superclass
+p BasicObject.superclass
+
+puts "The superclass of Class is: #{Class.superclass}"
+
+# The superclass of Class is Module—which is to say, every class is also a module.	To be precise, a class is a module with three additional 
+# instance methods (new, allocate, and superclass) that allow you to create objects or arrange classes into hierarchies.
+
