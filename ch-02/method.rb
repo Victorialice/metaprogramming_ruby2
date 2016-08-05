@@ -130,3 +130,13 @@ p e1.public_method
 
 
 p e1.private_method # private method `private_method' called for #<E:0x00000001a220c8> (NoMethodError)
+
+
+
+# Refinements are similar to Monkeypatches, but they’re not global.  A Refinement is active in only two places: the
+# refine block itself and the code starting from the place where you call using until the end of the module 
+# (if you’re in a module definition) or the end of the file (if you’re at the top level)
+# 
+# Refinements are like pieces of code patched right over a class, and they override normal method lookup. On the other 
+# hand, a Refinement works in a limited area of the program: the lines of code between the call to using and the end of 
+# the file, or the end of the module definition.
