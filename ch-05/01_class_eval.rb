@@ -1,3 +1,5 @@
+# How can you open the class if you don’t know its name?You need some way other than the class keyword to change the current 
+# class? By the class_eval method.
 # Module#class_eval (also known by its alternate name, module_eval) evaluates a block in the context of an existing class:
 
 def add_method_to(a_class)
